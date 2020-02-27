@@ -1,0 +1,2 @@
+C:\UnityGames\AndroidDash\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\UnityGames\AndroidDash\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
