@@ -22,12 +22,13 @@ namespace AndroidDash
 		void Update()
 		{
 			// If the player has no more health
-			if (Player.GetComponent<Player>().Idle.GetHealth() <= 0)
+			if (Player.GetComponent<Player>().CurrentState == Player.GetComponent<Player>().Dead)
 			{
 				// Stop all bubbles from chasing the player
 				EnemyManager.GetComponent<EnemyManager>().StopAllEnemies();
 
 				// TODO : end the game
+				
 			}
 		}
 

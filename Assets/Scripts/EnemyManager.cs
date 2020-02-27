@@ -63,6 +63,9 @@ namespace AndroidDash
 
 		public void StopAllEnemies()
 		{
+			// Stop spawning new enemies
+			SpawnEnemies = false;
+
 			// Stop all enemies from following the player
 			foreach (GameObject enemy in Enemies)
 			{

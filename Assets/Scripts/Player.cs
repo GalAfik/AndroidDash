@@ -94,6 +94,12 @@ namespace AndroidDash
 
 			// Decrease health
 			Health--;
+
+			// Kill the player when his health is 0 or less
+			if (Health <= 0)
+			{
+				Player.CurrentState = Player.Dead;
+			}
 		}
 	}
 
@@ -165,6 +171,7 @@ namespace AndroidDash
 		public IPlayerState CurrentState;
 		public PlayerIdle Idle = new PlayerIdle();
 		public PlayerDashing Dashing = new PlayerDashing();
+		public PlayerDead Dead = new PlayerDead();
 
 		// List of observers to this object
 		private List<IObserver> Observers = new List<IObserver>();
