@@ -113,5 +113,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Conf:
     FollowPlayer: 1
-    MoveSpeed: 2
+    MoveSpeed: 1
     ScoreValue: 25
