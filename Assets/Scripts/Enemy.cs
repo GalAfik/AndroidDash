@@ -5,6 +5,46 @@ using UnityEngine;
 
 namespace AndroidDash
 {
+	public interface IEnemyState
+	{
+		void Update(Enemy Enemy);
+	}
+
+	public class EnemySpawn : IEnemyState
+	{
+		public void Update(Enemy Enemy)
+		{
+			Enemy.StartCoroutine(Spawn(Enemy));
+		}
+
+		IEnumerator Spawn(Enemy Enemy)
+		{
+			yield return new WaitForSecondsRealtime(1);
+			// Go to the moving state
+			Enemy.CurrentState = Enemy.Moving;
+		}
+	}
+
+	public class EnemyMoving : IEnemyState
+	{
+		public void Update(Enemy Enemy)
+		{
+			if (Enemy.IsTargetingPlayer)
+			{
+				// Move towards the player
+				Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Enemy.Player.transform.position, Enemy.Conf.MoveSpeed * Time.deltaTime);
+			}
+		}
+	}
+
+	public class EnemyDead : IEnemyState
+	{
+		public void Update(Enemy Enemy)
+		{
+			throw new NotImplementedException();
+		}
+	}
+
 	public class Enemy : MonoBehaviour
 	{
 		[Serializable]
@@ -15,11 +55,20 @@ namespace AndroidDash
 			public int ScoreValue; // How many points this bubble is worth
 		}
 		public ConfigurationData Conf = new ConfigurationData();
-		protected bool IsTargetingPlayer;
-		protected GameObject Player; // The player this object should move towards
+		public bool IsTargetingPlayer;
+		public GameObject Player; // The player this object should move towards
 
-		void Awake()
+		// FSM States
+		public IEnemyState CurrentState;
+		public EnemySpawn Spawn = new EnemySpawn();
+		public EnemyMoving Moving = new EnemyMoving();
+		public EnemyDead Dead = new EnemyDead();
+
+		void Start()
 		{
+			// Set the initial state
+			CurrentState = Spawn;
+
 			IsTargetingPlayer = Conf.FollowPlayer;
 			// Grab a reference to the player object
 			Player = GameObject.FindWithTag("Player");
@@ -28,11 +77,8 @@ namespace AndroidDash
 		// Update is called once per frame
 		void Update()
 		{
-			if (IsTargetingPlayer)
-			{
-				// Move towards the player
-				transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Conf.MoveSpeed * Time.deltaTime);
-			}
+			// Delegate
+			CurrentState.Update(this);
 		}
 
 		public void StopTargetingPlayer()
