@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Conf:
-    EnemyPrefabs: []
+    EnemySpawns: []
+    MaximumEnemyCapacity: 25
     InitialEnemyCapacity: 1
     EnemyCapacityIncreaseRate: 4

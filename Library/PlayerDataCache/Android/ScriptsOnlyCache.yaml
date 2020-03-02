@@ -1,8 +1,17 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AndroidDash.Coin
+    - AndroidDash.CoinManager
+    - AndroidDash.EnemyManager
+    - AndroidDash.EnokiiKing
+    - AndroidDash.EnokiiLong
+    - AndroidDash.GameManager
+    - AndroidDash.GameUserInterface
     - AndroidDash.Player
-    - BubbleManager
+    - AndroidDash.Shitakii
+    - MainMenuManager
+    - SettingsMenuManager
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -11,6 +20,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -21,8 +36,76 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Slider
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/MainMenuScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11172}
+    - Class: 114
+      Script: {instanceID: 11804}
+    - Class: 114
+      Script: {instanceID: 11830}
+    - Class: 114
+      Script: {instanceID: 12218}
+    - Class: 114
+      Script: {instanceID: 12240}
+    - Class: 114
+      Script: {instanceID: 12456}
+    - Class: 114
+      Script: {instanceID: 12470}
+    - Class: 114
+      Script: {instanceID: 12646}
+    - Class: 114
+      Script: {instanceID: 12670}
+    - Class: 114
+      Script: {instanceID: 12736}
+    - Class: 114
+      Script: {instanceID: 12908}
+    - Class: 114
+      Script: {instanceID: 13124}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/MainScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -39,23 +122,118 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 58
       Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12948}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 14466}
+      Script: {instanceID: 11262}
+    - Class: 114
+      Script: {instanceID: 11266}
+    - Class: 114
+      Script: {instanceID: 11804}
+    - Class: 114
+      Script: {instanceID: 11972}
+    - Class: 114
+      Script: {instanceID: 12068}
+    - Class: 114
+      Script: {instanceID: 12078}
+    - Class: 114
+      Script: {instanceID: 12340}
+    - Class: 114
+      Script: {instanceID: 12376}
+    - Class: 114
+      Script: {instanceID: 12456}
+    - Class: 114
+      Script: {instanceID: 12670}
+    - Class: 114
+      Script: {instanceID: 12736}
+    - Class: 114
+      Script: {instanceID: 12798}
+    - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 114
+      Script: {instanceID: 13124}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/SettingsMenuScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11172}
+    - Class: 114
+      Script: {instanceID: 11388}
+    - Class: 114
+      Script: {instanceID: 11804}
+    - Class: 114
+      Script: {instanceID: 12218}
+    - Class: 114
+      Script: {instanceID: 12240}
+    - Class: 114
+      Script: {instanceID: 12456}
+    - Class: 114
+      Script: {instanceID: 12670}
+    - Class: 114
+      Script: {instanceID: 12736}
+    - Class: 114
+      Script: {instanceID: 13124}
+    - Class: 114
+      Script: {instanceID: 13158}
+    - Class: 114
+      Script: {instanceID: 14562}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -82,6 +260,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 1c83f84a9a3bb30e4ebcc730dcde07d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: EnemyManager
+  - hash:
+      serializedVersion: 2
+      Hash: 958fedbc88b75adf198dc24c687cdafb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: Coin
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -252,6 +442,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 13076e30e65e9b9e3348ecb596293b03
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: Shitakii
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -268,6 +464,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 66f849f143bf37362f5775eaa6b498f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: CoinManager
+  - hash:
+      serializedVersion: 2
+      Hash: 13076e30e65e9b9e3348ecb596293b03
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: EnokiiLong
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -304,6 +512,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 13076e30e65e9b9e3348ecb596293b03
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: EnokiiKing
+  - hash:
+      serializedVersion: 2
+      Hash: a0b93663ad5c681acb35d9d42770d9fb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: GameUserInterface
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -360,6 +580,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: a42afe937663c62986c55ac944869344
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenuManager
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -384,10 +610,22 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 833f0908bcfa5af9ef4dd229659fc710
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 13076e30e65e9b9e3348ecb596293b03
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidDash
+    className: Enemy
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d
@@ -396,7 +634,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 012fe15795bd342a41fb1e3c61cba8b5
+      Hash: 3ab5041a586deed450a0699109a93829
     assemblyName: Assembly-CSharp.dll
     namespaceName: AndroidDash
     className: Player
@@ -504,11 +742,13 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: b69609d01fc9165cf4a544e99fbcbd8e
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: BubbleManager
+    className: SettingsMenuManager
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/MainMenuScene.unity
+  - Assets/Scenes/SettingsMenuScene.unity
+  - Assets/Scenes/MainScene.unity
   playerPath: C:/UnityGames/AndroidDash/Builds/game.apk

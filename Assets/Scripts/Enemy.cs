@@ -64,6 +64,9 @@ namespace AndroidDash
 		public EnemyMoving Moving = new EnemyMoving();
 		public EnemyDead Dead = new EnemyDead();
 
+		private float spriteXScale;
+		private float spriteYScale;
+
 		void Start()
 		{
 			// Set the initial state
@@ -72,6 +75,10 @@ namespace AndroidDash
 			IsTargetingPlayer = Conf.FollowPlayer;
 			// Grab a reference to the player object
 			Player = GameObject.FindWithTag("Player");
+
+			// Get the local scale for flipping the sprite later
+			spriteXScale = transform.localScale.x;
+			spriteYScale = transform.localScale.y;
 		}
 
 		// Update is called once per frame
@@ -79,6 +86,10 @@ namespace AndroidDash
 		{
 			// Delegate
 			CurrentState.Update(this);
+
+			// Turn to face the player
+			if (Player.transform.position.x >= transform.position.x) transform.localScale = new Vector2(spriteXScale, spriteYScale);
+			else transform.localScale = new Vector2(-spriteXScale, spriteYScale);
 		}
 
 		public void StopTargetingPlayer()

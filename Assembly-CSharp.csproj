@@ -62,17 +62,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Bubble.cs" />
+    <Compile Include="Assets\Scripts\Coin.cs" />
+    <Compile Include="Assets\Scripts\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\EnokiiKing.cs" />
+    <Compile Include="Assets\Scripts\EnokiiLong.cs" />
     <Compile Include="Assets\Scripts\GameEvent.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameUserInterface.cs" />
-    <Compile Include="Assets\Scripts\GreenBubble.cs" />
     <Compile Include="Assets\Scripts\IObserver.cs" />
-    <Compile Include="Assets\Scripts\PinkBubble.cs" />
+    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Skeleton.cs" />
+    <Compile Include="Assets\Scripts\SettingsMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Shitakii.cs" />
     <Compile Include="Assets\Store Assets\Bandits - Pixel Art\Demo\Bandit.cs" />
     <Compile Include="Assets\Store Assets\Bandits - Pixel Art\Demo\CharacterSelector_Bandit.cs" />
     <Compile Include="Assets\Store Assets\Bandits - Pixel Art\Demo\Sensor_Bandit.cs" />

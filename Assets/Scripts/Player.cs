@@ -141,6 +141,12 @@ namespace AndroidDash
 				int scoreValue = collision.gameObject.GetComponent<Enemy>().Conf.ScoreValue;
 				Player.Notify(GameEvent.PLAYER_ATTACK, scoreValue);
 			}
+			else if (collision.gameObject.CompareTag("Coin"))
+			{
+				MonoBehaviour.Destroy(collision.gameObject);
+				// Notify the game manager of a coin being collected
+				Player.Notify(GameEvent.COIN_COLLECTED, 1); // The second value in this case does not matter. It's optional.
+			}
 		}
 	}
 

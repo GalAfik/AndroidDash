@@ -43,3 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a15566dc6c465bf46b339f4c932605c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Conf:
+    PlayerObject: {fileID: 0}
+    EnemyManagerObject: {fileID: 0}
+    UICanvasObject: {fileID: 0}
+    PointsPerCoin: 100

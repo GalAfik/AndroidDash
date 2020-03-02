@@ -8,14 +8,22 @@ namespace AndroidDash
 	public class EnemyManager : MonoBehaviour
 	{
 		[Serializable]
+		public struct SpawnChance
+		{
+			public GameObject EnemyPrefab; // The prefab to be spawned
+			public int SpawnCount; // The chance this enemy will be spawned
+		}
+		[Serializable]
 		public class ConfigurationData
 		{
-			public GameObject[] EnemyPrefabs; // The prefabs to be spawned
-			public int InitialEnemyCapacity; // The maximum number of enemies that can active at the same time
+			public SpawnChance[] EnemySpawns; // The prefabs to be spawned and percentage each will be spawned at
+			public int MaximumEnemyCapacity; // The maximum number of enemies that can active at the same time
+			public int InitialEnemyCapacity; // The starting number of enemies that can active at the same time
 			public float EnemyCapacityIncreaseRate; // How many seconds between each enemy capacity increase
 		}
 		public ConfigurationData Conf = new ConfigurationData();
-		private List<GameObject> Enemies = new List<GameObject>();
+		private List<GameObject> Enemies = new List<GameObject>(); // Enemies currently active
+		private List<GameObject> EnemiesByCount = new List<GameObject>();
 		private int EnemyCapacity;
 		private bool SpawnEnemies = true;
 
@@ -23,6 +31,16 @@ namespace AndroidDash
 		{
 			// Set the initial enemy capacity
 			EnemyCapacity = Conf.InitialEnemyCapacity;
+
+			// Set up a list of spawn prefabs to choose from, by chance of spawn
+			foreach (SpawnChance enemySpawnChance in Conf.EnemySpawns)
+			{
+				// Add an instance of the enemy type for each count of spawn chance
+				for (int i = 0; i < enemySpawnChance.SpawnCount; i++)
+				{
+					EnemiesByCount.Add(enemySpawnChance.EnemyPrefab);
+				}
+			}
 		}
 
 		// Update is called once per frame
@@ -38,8 +56,8 @@ namespace AndroidDash
 					);
 
 				// Spawn a random enemy prefab from the array
-				int prefabIndex = UnityEngine.Random.Range(0, Conf.EnemyPrefabs.Length);
-				GameObject enemy = Instantiate(Conf.EnemyPrefabs[prefabIndex], spawnPosition, Quaternion.identity, transform);
+				int prefabIndex = UnityEngine.Random.Range(0, EnemiesByCount.Count);
+				GameObject enemy = Instantiate(EnemiesByCount[prefabIndex], spawnPosition, Quaternion.identity, transform);
 				Enemies.Add(enemy);
 			}
 
@@ -47,7 +65,7 @@ namespace AndroidDash
 			Enemies.RemoveAll(enemies => enemies == null);
 
 			// Start increasing the enemy capacity
-			if (SpawnEnemies) StartCoroutine(IncreaseBubbleCapacity());
+			if (SpawnEnemies && EnemyCapacity < Conf.MaximumEnemyCapacity) StartCoroutine(IncreaseBubbleCapacity());
 		}
 
 		IEnumerator IncreaseBubbleCapacity()
