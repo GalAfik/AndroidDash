@@ -62,20 +62,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Coin.cs" />
-    <Compile Include="Assets\Scripts\CoinManager.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyManager.cs" />
-    <Compile Include="Assets\Scripts\EnokiiKing.cs" />
-    <Compile Include="Assets\Scripts\EnokiiLong.cs" />
+    <Compile Include="Assets\Scripts\FloatingObject.cs" />
     <Compile Include="Assets\Scripts\GameEvent.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameUserInterface.cs" />
     <Compile Include="Assets\Scripts\IObserver.cs" />
-    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\SettingsMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Shitakii.cs" />
+    <Compile Include="Assets\Scripts\Managers\ApplicationManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\CoinManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\MainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\SettingsMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Objects\Coin.cs" />
+    <Compile Include="Assets\Scripts\Objects\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Objects\EnokiiKing.cs" />
+    <Compile Include="Assets\Scripts\Objects\EnokiiLong.cs" />
+    <Compile Include="Assets\Scripts\Objects\Player.cs" />
+    <Compile Include="Assets\Scripts\Objects\Shitakii.cs" />
     <Compile Include="Assets\Store Assets\Bandits - Pixel Art\Demo\Bandit.cs" />
     <Compile Include="Assets\Store Assets\Bandits - Pixel Art\Demo\CharacterSelector_Bandit.cs" />
     <Compile Include="Assets\Store Assets\Bandits - Pixel Art\Demo\Sensor_Bandit.cs" />

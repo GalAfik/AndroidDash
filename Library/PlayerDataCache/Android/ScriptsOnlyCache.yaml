@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - AndroidDash.GameUserInterface
     - AndroidDash.Player
     - AndroidDash.Shitakii
+    - FloatingObject
     - MainMenuManager
     - SettingsMenuManager
     Unity.2D.Tilemap.Editor.dll:
@@ -63,6 +64,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 109
@@ -78,19 +81,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 12470}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 12646}
+      Script: {instanceID: 12648}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 12910}
     - Class: 114
-      Script: {instanceID: 13124}
+      Script: {instanceID: 13126}
+    - Class: 114
+      Script: {instanceID: 14596}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,19 +150,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12340}
     - Class: 114
-      Script: {instanceID: 12376}
+      Script: {instanceID: 12378}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 12994}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 13124}
+      Script: {instanceID: 13126}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -208,17 +213,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 12350}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 13124}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 13158}
+      Script: {instanceID: 13126}
     - Class: 114
-      Script: {instanceID: 14562}
+      Script: {instanceID: 13160}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -520,6 +525,12 @@ ScriptsOnlyBuild:
     className: EnokiiKing
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsMenuManager
+  - hash:
+      serializedVersion: 2
       Hash: a0b93663ad5c681acb35d9d42770d9fb
     assemblyName: Assembly-CSharp.dll
     namespaceName: AndroidDash
@@ -742,10 +753,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 3b3b5cc46a020362b0e7ff0bafd69320
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SettingsMenuManager
+    className: FloatingObject
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenuScene.unity
